@@ -8,7 +8,7 @@ import MyField from "./MyField";
 const RootLevelFields = () => (
   <>
     <Heading text={"Root level"} />
-    <Card css={{ margin: "0px 0px 15px" }}>
+    <Card css={{ margin: "0px 0px 15px", paddingBottom: "10px" }}>
       <MyField
         name="first_input"
         label={"First input"}

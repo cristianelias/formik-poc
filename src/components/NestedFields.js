@@ -25,7 +25,23 @@ const NestedFields = ({ initialValues, values }) => (
           </Button>
         </Row>
         {values.nested.map((item, index) => (
-          <Card key={index} css={{ margin: "0 0 20px" }}>
+          <Card key={index} css={{ margin: "0 0 20px", paddingBottom: "10px" }}>
+            <Row justify="space-between" align="center">
+              <Heading size={24} text={`Group #${index + 1}`} />
+              <Button
+                shadow
+                color="error"
+                auto
+                type="button"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  remove(index);
+                }}
+              >
+                Delete
+              </Button>
+            </Row>
+
             {Object.keys(item).map((name) => (
               <MyField
                 key={`${index} x ${name}`}
@@ -36,19 +52,6 @@ const NestedFields = ({ initialValues, values }) => (
                 }
               />
             ))}
-            <Button
-              shadow
-              color="error"
-              auto
-              type="button"
-              onClick={(e) => {
-                e.stopPropagation();
-                remove(index);
-              }}
-              css={{ margin: "20px 0 0" }}
-            >
-              Delete
-            </Button>
           </Card>
         ))}
       </>
