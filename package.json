@@ -1,7 +1,7 @@
 {
-  "name": "react-playground",
+  "name": "formik-poc",
   "version": "1.0.0",
-  "description": "React playground",
+  "description": "Formik and Yup: Nested fields + custom validations",
   "source": "src/index.html",
   "scripts": {
     "start": "parcel",
